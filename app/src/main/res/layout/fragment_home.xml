@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+       >
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/headerLT"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120sdp"
+            android:background="@color/light_blue"
+            android:gravity="bottom"
+            android:padding="@dimen/_10sdp"
+            android:weightSum="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:background="@drawable/account_type_background"
+                android:backgroundTint="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_5sdp"
+
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/baseline_account_circle_24" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:textSize="@dimen/_10sdp"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:text="Account Type:" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_7sdp"
+                    android:text="Paid"
+                    android:textSize="@dimen/_10sdp"
+                    android:maxLines="1"
+                    android:textColor="@color/light_blue" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_weight=".5"
+                android:background="@drawable/account_type_background"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_5sdp"
+
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/baseline_access_time_24" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:text="Expiring in:"
+                    android:textSize="@dimen/_10sdp"
+                    android:maxLines="1"
+                    android:textColor="@color/grey" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_7sdp"
+                    android:text="309 Days"
+                    android:textSize="@dimen/_10sdp"
+                    android:maxLines="1"
+                    android:textColor="@color/grey" />
+            </LinearLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backwordIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headerLT"
+            app:srcCompat="@drawable/back_ic" />
+         <androidx.appcompat.widget.AppCompatTextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="view title"
+             android:id="@+id/view_titleTV"
+             app:layout_constraintStart_toStartOf="@+id/backwordIV"
+             app:layout_constraintEnd_toStartOf="@+id/forwardIV"
+             app:layout_constraintTop_toBottomOf="@+id/headerLT"
+             app:layout_constraintBottom_toTopOf="@+id/tab_layout"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_15sdp"
+            app:tabBackground="@drawable/tab_selector"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="0dp"
+            app:tabIndicatorFullWidth="false"
+            app:tabMaxWidth="@dimen/_15sdp"
+            app:tabSelectedTextColor="@android:color/transparent"
+            app:tabTextColor="@android:color/transparent"
+            android:background="#00FFFFFF"
+            app:tabIndicatorGravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/backwordIV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+             />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/forwardIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:rotation="180"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headerLT"
+            app:srcCompat="@drawable/back_ic" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tab_layout" />
+
+        <include
+            android:id="@+id/bottom_logo"
+            layout="@layout/bottom_logo_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

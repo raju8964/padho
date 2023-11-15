@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+   >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_background">
+
+        <include
+            layout="@layout/bottom_layout_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <include
+            layout="@layout/logo_layout"
+            android:id="@+id/log"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/numberEV"
+            style="@style/number"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:hint="Number*"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:background="@drawable/editview_white_underline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/passwordEV"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/passwordEV"
+            android:layout_width="0dp"
+            style="@style/password"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/editview_white_underline"
+            android:hint="Password*"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/loginTV"
+            app:layout_constraintEnd_toEndOf="@id/numberEV"
+            app:layout_constraintStart_toStartOf="@id/numberEV"
+            android:paddingVertical="@dimen/_10sdp"
+
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/loginTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_5sdp"
+            android:textColor="@color/appcolor"
+            android:background="@drawable/login_button_bg"
+            android:textSize="@dimen/_19sdp"
+            android:textStyle="bold"
+            android:text="@string/login"
+            android:textAlignment="center"
+           app:layout_constraintBottom_toTopOf="@+id/bottom_logo"
+            app:layout_constraintEnd_toEndOf="@id/numberEV"
+            android:layout_marginBottom="@dimen/_30sdp"
+            app:layout_constraintStart_toStartOf="@id/numberEV" />
+
+
+        <include
+            android:id="@+id/bottom_logo"
+            layout="@layout/bottom_logo_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

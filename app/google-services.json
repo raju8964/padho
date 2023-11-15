@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "932161470830",
+    "firebase_url": "https://padho-a92b8-default-rtdb.firebaseio.com",
+    "project_id": "padho-a92b8",
+    "storage_bucket": "padho-a92b8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:932161470830:android:6f71979c983503dbfe017f",
+        "android_client_info": {
+          "package_name": "com.padho"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "932161470830-afg4mb336lm8acq2uoug3q7afcntika4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOwBR8Iw-CPRpOUX4T_0fCh8nn8UkIw4U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "932161470830-afg4mb336lm8acq2uoug3q7afcntika4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

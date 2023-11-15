@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:drawable="@drawable/ellipse4_bg"
+        android:gravity="right"/>
+
+    <item
+        android:drawable="@drawable/ellipse6_bg"
+        android:gravity="right|bottom"/>
+    <item
+        android:drawable="@drawable/ellipse3_bg"
+        android:gravity="right|bottom"/>
+
+    <item
+        android:drawable="@drawable/ellipse5_bg"
+        android:gravity="right|bottom"/>
+    <item
+        android:drawable="@drawable/ellipse1_bg"
+        android:gravity="right|bottom"/>
+
+</layer-list>

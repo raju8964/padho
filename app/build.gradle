@@ -1,0 +1,87 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
+    id 'com.google.gms.google-services'
+    id("androidx.navigation.safeargs")
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.padho'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.padho"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    dataBinding {
+        enabled = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.10.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+
+    // Navigation
+    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+    // Hilt
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
+    androidTestImplementation "com.google.dagger:hilt-android-testing:$hilt_version"
+    kaptAndroidTest "com.google.dagger:hilt-android-compiler:$hilt_version"
+    //sdp and ssp
+    implementation "com.intuit.ssp:ssp-android:$sspVersion"
+    implementation "com.intuit.sdp:sdp-android:$sspVersion"
+    //Image Libraries
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
+    /// circuler immage
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-firestore-ktx:24.2.2'
+    implementation 'com.google.firebase:firebase-storage:20.1.0'
+    // FirebaseUI for Firebase Realtime Database
+    implementation 'com.google.firebase:firebase-database-ktx'
+    // FirebaseUI for Firebase Auth
+    implementation 'com.firebaseui:firebase-ui-auth:8.0.2'
+    // pdf view
+   // implementation 'com.github.barteksc:AndroidPdfViewer:3.2.0-beta.1'
+
+
+}
